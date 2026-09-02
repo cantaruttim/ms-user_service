@@ -6,6 +6,7 @@ import java.util.UUID;
 public class Users {
 
     private UUID id;
+    private String userRegistrationNumber;
     private String userName;
     private String userGender;
     private LocalDate userBirthDate;
@@ -16,8 +17,9 @@ public class Users {
 
     public Users() {}
 
-    public Users(UUID id, String userName, String userGender, LocalDate userBirthDate, String userEmail, String userAddress, String userPhone, String userFederalUnion) {
+    public Users(UUID id, String userRegistrationNumber, String userName, String userGender, LocalDate userBirthDate, String userEmail, String userAddress, String userPhone, String userFederalUnion) {
         this.id = id;
+        this.userRegistrationNumber = userRegistrationNumber;
         this.userName = userName;
         this.userGender = userGender;
         this.userBirthDate = userBirthDate;
@@ -33,6 +35,14 @@ public class Users {
 
     public void setId(UUID id) {
         this.id = id;
+    }
+
+    public String getUserRegistrationNumber() {
+        return userRegistrationNumber;
+    }
+
+    public void setUserRegistrationNumber(String userRegistrationNumber) {
+        this.userRegistrationNumber = userRegistrationNumber;
     }
 
     public String getUserName() {
